@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72e71f46-e83b-4666-9469-e2f53b37c835" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/github/hemkant/kafka/Lesson1/ProducerDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/github/hemkant/kafka/Lesson1/ProducerDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoAssignAndSeek.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoGroups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoWithThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemoKeys.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemoWithCallback.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,41 +45,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.hemkant.kafka.Lesson1" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java" />
+      <recent name="$PROJECT_DIR$/Kafka-Bascis/src/main/java" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.ConsumerDemoAssignAndSeek">
-    <configuration name="ConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ConsumerDemo" />
-      <module name="kafka-beginner" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TwitterProducer (1)">
     <configuration name="ConsumerDemoAssignAndSeek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ConsumerDemoAssignAndSeek" />
-      <module name="kafka-beginner" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ConsumerDemoGroups" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ConsumerDemoGroups" />
       <module name="kafka-beginner" />
       <extension name="coverage">
         <pattern>
@@ -102,7 +85,7 @@
     </configuration>
     <configuration name="ProducerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ProducerDemo" />
-      <module name="kafka-beginner" />
+      <module name="Kafka-Bascis" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.github.hemkant.kafka.Lesson1.*" />
@@ -113,13 +96,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwitterProducer (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson2.TwitterProducer" />
+      <module name="Kafka-Producer-Twitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwitterProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson2.TwitterProducer" />
+      <module name="kafka-beginner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TwitterProducer (1)" />
+        <item itemvalue="Application.ProducerDemo" />
+        <item itemvalue="Application.TwitterProducer" />
         <item itemvalue="Application.ConsumerDemoAssignAndSeek" />
         <item itemvalue="Application.ConsumerDemoWithThread" />
-        <item itemvalue="Application.ConsumerDemoGroups" />
-        <item itemvalue="Application.ConsumerDemo" />
-        <item itemvalue="Application.ProducerDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -149,26 +158,46 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="796" height="250" key="GridCell.Tab.0.bottom" timestamp="1577799443912">
+    <state width="474" height="466" key="DebuggerActiveHint" timestamp="1577802746098">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577799443912" />
+    <state width="474" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1577802746098" />
+    <state width="796" height="250" key="GridCell.Tab.0.bottom" timestamp="1577806582553">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="796" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582553" />
     <state width="1358" height="250" key="GridCell.Tab.0.bottom/0.23.1680.979@0.23.1680.979" timestamp="1577794836518" />
-    <state width="796" height="250" key="GridCell.Tab.0.center" timestamp="1577799443911">
+    <state width="796" height="250" key="GridCell.Tab.0.center" timestamp="1577806582552">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577799443911" />
+    <state width="796" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582552" />
     <state width="1358" height="250" key="GridCell.Tab.0.center/0.23.1680.979@0.23.1680.979" timestamp="1577794836517" />
-    <state width="796" height="250" key="GridCell.Tab.0.left" timestamp="1577799443911">
+    <state width="796" height="250" key="GridCell.Tab.0.left" timestamp="1577806582551">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577799443911" />
+    <state width="796" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582551" />
     <state width="1358" height="250" key="GridCell.Tab.0.left/0.23.1680.979@0.23.1680.979" timestamp="1577794836516" />
-    <state width="796" height="250" key="GridCell.Tab.0.right" timestamp="1577799443912">
+    <state width="796" height="250" key="GridCell.Tab.0.right" timestamp="1577806582552">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577799443912" />
+    <state width="796" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582552" />
     <state width="1358" height="250" key="GridCell.Tab.0.right/0.23.1680.979@0.23.1680.979" timestamp="1577794836517" />
+    <state width="796" height="363" key="GridCell.Tab.1.bottom" timestamp="1577803989410">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="796" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989410" />
+    <state width="796" height="363" key="GridCell.Tab.1.center" timestamp="1577803989409">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="796" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989409" />
+    <state width="796" height="363" key="GridCell.Tab.1.left" timestamp="1577803989408">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="796" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989408" />
+    <state width="796" height="363" key="GridCell.Tab.1.right" timestamp="1577803989410">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="796" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989410" />
     <state x="0" y="188" key="Maven.ArtifactSearchDialog" timestamp="1577799235972">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -177,5 +206,25 @@
       <screen x="0" y="23" width="1680" height="979" />
     </state>
     <state x="636" y="367" key="com.intellij.ide.util.TipDialog/0.23.1680.979@0.23.1680.979" timestamp="1577792875457" />
+    <state x="0" y="225" key="new project wizard" timestamp="1577806233476">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="0" y="225" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1577806233476" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson2/TwitterProducer.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson2/TwitterProducer.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
