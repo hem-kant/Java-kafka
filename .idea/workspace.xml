@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72e71f46-e83b-4666-9469-e2f53b37c835" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoAssignAndSeek.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoGroups.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ConsumerDemoWithThread.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemoKeys.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/hemkant/kafka/Lesson1/ProducerDemoWithCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java/kafka/Lesson2/TwitterProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java/kafka/Lesson2/TwitterProducer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
