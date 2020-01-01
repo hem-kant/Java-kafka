@@ -1,11 +1,19 @@
 package com.github.hemkant.kafka.Lesson3;
 
+import com.google.gson.JsonParser;
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.client.CredentialsProvider;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;
+import org.apache.kafka.clients.consumer.ConsumerConfig;
+import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.common.serialization.StringDeserializer;
+import org.elasticsearch.action.bulk.BulkRequest;
+import org.elasticsearch.action.bulk.BulkResponse;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
 import org.elasticsearch.client.Client;
@@ -20,6 +28,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.Properties;
 
 public class ElasticSearchConsumer {
   public static RestHighLevelClient createClient(){
@@ -36,7 +47,7 @@ public class ElasticSearchConsumer {
     //////////////////////////
 
     // replace with your own credentials
-    String hostname = "kafka-poc-4722740167.eu-west-1.bonsaisearch.net"; // localhost or bonsai url
+    String hostname = "kafka-poc-4722740167.eu-west-1.bonsaisearch.net"; // localhost or bonsai url ... Don't worry I changed the password and the username :)
     String username = "ojuth5h3z7"; // needed only for bonsai
     String password = "8yu36tlk2i"; // needed only for bonsai
 
@@ -59,21 +70,79 @@ public class ElasticSearchConsumer {
 
   }
 
-  public static void main(String[] args) throws IOException {
+  public static KafkaConsumer<String, String> createConsumer(String topic){
+    String bootstrapServers = "127.0.0.1:9092";
+    String groupId = "Kafka-ElasticSearch-Demo";
+
+    // create consumer configs
+    Properties properties = new Properties();
+    properties.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
+    properties.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+    properties.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+    properties.setProperty(ConsumerConfig.GROUP_ID_CONFIG, groupId);
+    properties.setProperty(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+    properties.setProperty(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false"); // disable auto commit of offsets
+    properties.setProperty(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, "5"); // disable auto commit of offsets
+
+    // create consumer
+    KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);
+    consumer.subscribe(Arrays.asList(topic));
+    return consumer;
+  }
+  private static JsonParser jsonParser = new JsonParser();
+  private static String extractIdFromTweet(String tweetJson){
+    // gson library
+    return jsonParser.parse(tweetJson)
+        .getAsJsonObject()
+        .get("id_str")
+        .getAsString();
+  }
+
+  public static void main(String[] args) throws IOException, InterruptedException {
     Logger logger = LoggerFactory.getLogger(ElasticSearchConsumer.class.getName());
     System.out.println("Elastci Search Consumer");
     RestHighLevelClient client = createClient();
 
-    String jsonString = "{ \"foo\":\"bar\"}";
-    IndexRequest indexRequest = new IndexRequest(
-    "twitter",
-        "tweets"
-    ).source(jsonString, XContentType.JSON);
 
-    IndexResponse indexResponse = client.index(indexRequest, RequestOptions.DEFAULT);
-    String Id = indexResponse.getId();
-    logger.info(Id);
+    KafkaConsumer<String,String> consumer  = createConsumer("twitter_tweets");
+    // poll for new data
+    while(true){
+      ConsumerRecords<String, String> records =
+          consumer.poll(Duration.ofMillis(100)); // new in Kafka 2.0.0
+      Integer recordCount = records.count();
+      logger.info("Received " + recordCount + " records");
 
-    client.close();
+      BulkRequest bulkRequest = new BulkRequest();
+
+
+      for (ConsumerRecord<String, String> record : records){
+        // 2 strategies
+        // kafka generic ID
+        // String id = record.topic() + "_" + record.partition() + "_" + record.offset();
+
+        // twitter feed specific id
+        String id = extractIdFromTweet(record.value());
+        IndexRequest indexRequest = new IndexRequest(
+            "twitter",
+            "tweets",id
+        ).source(record.value(), XContentType.JSON);
+        bulkRequest.add(indexRequest); // we add to our bulk request (takes no time)
+
+        Thread.sleep(10);
+      }
+      logger.info("Committing offsets...");
+      if (recordCount > 0) {
+        BulkResponse bulkItemResponses = client.bulk(bulkRequest, RequestOptions.DEFAULT);
+        logger.info("Committing offsets...");
+        consumer.commitSync();
+        logger.info("Offsets have been committed");
+        try {
+          Thread.sleep(1000);
+        } catch (InterruptedException e) {
+          e.printStackTrace();
+        }
+      }
+    }
+    //client.close();
   }
 }
