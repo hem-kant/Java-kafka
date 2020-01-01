@@ -23,6 +23,7 @@
   <modules>
     <module>Kafka-Bascis</module>
     <module>Kafka-Producer-Twitter</module>
+    <module>Kafka-Consumer-ElasticSearch</module>
   </modules>
 
 </project>

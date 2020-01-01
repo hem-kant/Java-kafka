@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72e71f46-e83b-4666-9469-e2f53b37c835" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java/kafka/Lesson2/TwitterProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java/kafka/Lesson2/TwitterProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +43,9 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Kafka-Producer-Twitter/src/main/java" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Kafka-Consumer-ElasticSearch/src/main/java" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.hemkant.kafka.Lesson1" />
     </key>
@@ -49,7 +54,7 @@
       <recent name="$PROJECT_DIR$/Kafka-Bascis/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TwitterProducer (1)">
+  <component name="RunManager" selected="Application.ElasticSearchConsumer">
     <configuration name="ConsumerDemoAssignAndSeek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ConsumerDemoAssignAndSeek" />
       <module name="kafka-beginner" />
@@ -63,12 +68,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConsumerDemoWithThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson1.ConsumerDemoWithThread" />
-      <module name="kafka-beginner" />
+    <configuration name="ElasticSearchConsumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.hemkant.kafka.Lesson3.ElasticSearchConsumer" />
+      <module name="Kafka-Consumer-ElasticSearch" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson1.*" />
+          <option name="PATTERN" value="com.github.hemkant.kafka.Lesson3.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ElasticSearchConsumer" />
         <item itemvalue="Application.TwitterProducer (1)" />
         <item itemvalue="Application.ProducerDemo" />
         <item itemvalue="Application.TwitterProducer" />
         <item itemvalue="Application.ConsumerDemoAssignAndSeek" />
-        <item itemvalue="Application.ConsumerDemoWithThread" />
       </list>
     </recent_temporary>
   </component>
@@ -155,54 +160,55 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state width="474" height="466" key="DebuggerActiveHint/0.0.1680.1050@0.0.1680.1050" timestamp="1577802746098" />
-    <state width="796" height="250" key="GridCell.Tab.0.bottom" timestamp="1577806582553">
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom" timestamp="1577891661188">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582553" />
+    <state width="1638" height="250" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577891661188" />
     <state width="1358" height="250" key="GridCell.Tab.0.bottom/0.23.1680.979@0.23.1680.979" timestamp="1577794836518" />
-    <state width="796" height="250" key="GridCell.Tab.0.center" timestamp="1577806582552">
+    <state width="1638" height="250" key="GridCell.Tab.0.center" timestamp="1577891661187">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582552" />
+    <state width="796" height="250" key="GridCell.Tab.0.center/0.0.1680.1002@0.0.1680.1002" timestamp="1577807303661" />
+    <state width="1638" height="250" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577891661187" />
     <state width="1358" height="250" key="GridCell.Tab.0.center/0.23.1680.979@0.23.1680.979" timestamp="1577794836517" />
-    <state width="796" height="250" key="GridCell.Tab.0.left" timestamp="1577806582551">
+    <state width="1638" height="250" key="GridCell.Tab.0.left" timestamp="1577891661186">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582551" />
-    <state width="1358" height="250" key="GridCell.Tab.0.left/0.23.1680.979@0.23.1680.979" timestamp="1577794836516" />
-    <state width="796" height="250" key="GridCell.Tab.0.right" timestamp="1577806582552">
+    <state width="1638" height="250" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577891661186" />
+    <state width="796" height="250" key="GridCell.Tab.0.left/0.23.1680.979@0.23.1680.979" timestamp="1577807303654" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right" timestamp="1577891661187">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577806582552" />
+    <state width="1638" height="250" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577891661187" />
     <state width="1358" height="250" key="GridCell.Tab.0.right/0.23.1680.979@0.23.1680.979" timestamp="1577794836517" />
-    <state width="796" height="363" key="GridCell.Tab.1.bottom" timestamp="1577803989410">
+    <state width="796" height="363" key="GridCell.Tab.1.bottom" timestamp="1577807303679">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989410" />
-    <state width="796" height="363" key="GridCell.Tab.1.center" timestamp="1577803989409">
+    <state width="796" height="363" key="GridCell.Tab.1.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1577807303679" />
+    <state width="796" height="363" key="GridCell.Tab.1.center" timestamp="1577807303678">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989409" />
-    <state width="796" height="363" key="GridCell.Tab.1.left" timestamp="1577803989408">
+    <state width="796" height="363" key="GridCell.Tab.1.center/0.0.1680.1050@0.0.1680.1050" timestamp="1577807303678" />
+    <state width="796" height="363" key="GridCell.Tab.1.left" timestamp="1577807303678">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989408" />
-    <state width="796" height="363" key="GridCell.Tab.1.right" timestamp="1577803989410">
+    <state width="796" height="363" key="GridCell.Tab.1.left/0.0.1680.1050@0.0.1680.1050" timestamp="1577807303678" />
+    <state width="796" height="363" key="GridCell.Tab.1.right" timestamp="1577807303678">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="796" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577803989410" />
-    <state x="0" y="188" key="Maven.ArtifactSearchDialog" timestamp="1577799235972">
+    <state width="796" height="363" key="GridCell.Tab.1.right/0.0.1680.1050@0.0.1680.1050" timestamp="1577807303678" />
+    <state x="236" y="377" key="Maven.ArtifactSearchDialog" timestamp="1577891078512">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="0" y="188" key="Maven.ArtifactSearchDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1577799235972" />
-    <state x="636" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1577792875457">
+    <state x="236" y="377" key="Maven.ArtifactSearchDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1577891078512" />
+    <state x="636" y="367" key="com.intellij.ide.util.TipDialog" timestamp="1577890667421">
       <screen x="0" y="23" width="1680" height="979" />
     </state>
-    <state x="636" y="367" key="com.intellij.ide.util.TipDialog/0.23.1680.979@0.23.1680.979" timestamp="1577792875457" />
-    <state x="0" y="225" key="new project wizard" timestamp="1577806233476">
+    <state x="636" y="367" key="com.intellij.ide.util.TipDialog/0.23.1680.979@0.23.1680.979" timestamp="1577890667421" />
+    <state x="0" y="225" key="new project wizard" timestamp="1577890170489">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="0" y="225" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1577806233476" />
+    <state x="0" y="225" key="new project wizard/0.0.1680.1050@0.0.1680.1050" timestamp="1577890170489" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
