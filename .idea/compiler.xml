@@ -9,6 +9,7 @@
         <module name="Kafka-Consumer-ElasticSearch" />
         <module name="Kafka-Bascis" />
         <module name="Kafka-Producer-Twitter" />
+        <module name="Kafka-streams-filter-tweets" />
       </profile>
     </annotationProcessing>
   </component>

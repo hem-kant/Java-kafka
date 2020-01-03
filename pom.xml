@@ -24,6 +24,7 @@
     <module>Kafka-Bascis</module>
     <module>Kafka-Producer-Twitter</module>
     <module>Kafka-Consumer-ElasticSearch</module>
+    <module>Kafka-streams-filter-tweets</module>
   </modules>
 
 </project>
